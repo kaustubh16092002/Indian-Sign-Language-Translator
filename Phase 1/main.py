@@ -43,13 +43,13 @@ def func():
                         print('Say something')
                         audio = r.listen(source)
                         try:
-                                a=r.recognize_sphinx(audio)
+                                a = r.recognize_sphinx(audio)
                                 print("you said " + a.lower())
                                 
                                 for c in string.punctuation:
                                     a= a.replace(c,"")
                                     
-                                if(a.lower()=='goodbye'):
+                                if(a.lower() == 'goodbye'):
                                         print("oops!Time To say good bye")
                                         break
                                 
@@ -118,7 +118,7 @@ while 1:
   msg="HEARING IMPAIRMENT ASSISTANT"
   choices = ["Live Voice","All Done!"] 
   reply   = buttonbox(msg,image=image,choices=choices)
-  if reply ==choices[0]:
+  if reply == choices[0]:
         func()
   if reply == choices[1]:
         quit()
